@@ -41,6 +41,8 @@ const reducer = (state, action) => {
       const decreaseIndex = state.selectedItems.findIndex(
         (item) => item.id === action.payload.id
       );
+      state.selectedItems[decreaseIndex].quantity--;
+
       return {
         ...state,
         ...sumProducts(state.selectedItems),

@@ -4,7 +4,6 @@ import { useCart } from "../context/CartProvider";
 import styles from "./Layout.module.css";
 function Layout({ children }) {
   const [state] = useCart();
-  console.log(state);
   return (
     <>
       <header className={styles.header}>
